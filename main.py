@@ -27,7 +27,8 @@ device     = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model      = AutoModelForCausalLM.from_pretrained(
     model_name,
     device_map="auto",
-    torch_dtype=torch.float16
+    torch_dtype=torch.float16,
+    from_tf=True
 ).to(device)
 
 
