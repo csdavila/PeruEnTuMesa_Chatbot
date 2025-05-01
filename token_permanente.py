@@ -1,6 +1,7 @@
 import requests
 
-
+# APP_ID = '1001780825428090'
+# APP_SECRET = '3d0817b77caccfc70b69e6b53d82921d'
 APP_ID = ''
 APP_SECRET = ''
 SHORT_LIVED_TOKEN = ''
