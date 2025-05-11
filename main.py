@@ -8,11 +8,9 @@ from flask import Flask, request
 import torch
 
 VERIFY_TOKEN = os.getenv("VERIFY_TOKEN", "mi_token_unico_12345")
-PHONE_ID     = "622356997632753"
-# PHONE_ID     = "668037233053298"
+PHONE_ID     = "668397103018966"
 WHATSAPP_API = f"https://graph.facebook.com/v13.0/{PHONE_ID}/messages"
-ACCESS_TOKEN = os.getenv("ACCESS_TOKEN", "EAAJqQiKe1jgBOZCsZAt2kb66NTV0Ppr3sKQ7iAAi5wAj2WGZC7lT7AnneyKZBFxygSC6SWlZAgIjnLkHZBePFgE5D6DrcSXGHTZCzVyoqgnC8I1EtQtYoqs2ELDeHDqf1foCAx38ctAXZAHRFImNIHaZAfLMNalZCKvMaRRze7UzgTwMd0ZBfUwdaW1")
-# ACCESS_TOKEN = os.getenv("ACCESS_TOKEN", "EAAOPHUYZBEHoBO9Rz9hWBws6lgUiZCOb3i6DK5JVO1x8lO6YxNnK6yWpTK31u8cLu1JLJxPhWfHB9j66ZBPr5VxZAs6CwpQKAOAhRJ2MLQQrUxSNkkFlVHStXkveTl8cWR1ZCikHtFKI9unA7I6VpAbvKWCBgyOjiOb4n4nsOaZBYUZB7uBZBQ3QnZAUSt0lTPBXGa8shyrpupAmEupZB07jjJoLRq")
+ACCESS_TOKEN = os.getenv("ACCESS_TOKEN", "EAANyv00jct8BOyfdi2ZCVqHbZCGZAlk6nR8UZAUZB8umwAFN9nQnNK4dBL8LDnSgO02cW7696FO8QfV5FrFlnl3x4ZA7alOPUSGEQk5RePMOUsv1ek2iEL5UgP95aPYy0uuX20GERB9msmjibZAZA4u5DvucEAPLlxFNQJXJYm5Hc5DlZChCZCOng8kEHwvG4pn0iIrJD5miFAG1VxGgJXyLp3aFk1")
 
 # Inicializar Firebase
 if not firebase_admin._apps:
@@ -22,6 +20,7 @@ db = firestore.client()
 
 # Cargar modelo de Hugging Face
 model_name = "csdavila/Llama-3.2"
+# model_name = "meta-llama/Llama-3.2-1B"
 tokenizer  = AutoTokenizer.from_pretrained(model_name)
 device     = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model      = AutoModelForCausalLM.from_pretrained(
