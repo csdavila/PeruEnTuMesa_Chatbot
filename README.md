@@ -37,8 +37,8 @@ torch
 Clona el repositorio y entra en el directorio:
 
 ```bash
-git clone https://github.com/tu_usuario/asistente-comida-whatsapp.git
-cd asistente-comida-whatsapp
+git clone https://github.com/csdavila/PeruEnTuMesa_Chatbot.git
+cd PeruEnTuMesa_Chatbot
 ```
 
 Agrega tu archivo de credenciales Firebase:
