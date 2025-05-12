@@ -58,7 +58,7 @@ model_name = "csdavila/Llama-3.2"
 ## ▶️ Ejecución
 
 ```bash
-python app.py
+python main.py
 ```
 
 ## 🌐 Webhook de WhatsApp
